@@ -1,0 +1,26 @@
+<%- include("partials/header"); -%>
+<h1>  <u><strong>Customers Details</strong></u></h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Balance</th>
+            <th>More Details</th>
+        </tr>
+    </thead>
+    <tbody>
+
+          <% customers.forEach(function(customer){ %>
+            <tr class="active-row">
+     <td><%= customer.name %></td>
+     <td><%= customer.email %></td>
+     <td><%= customer.balance %></td>
+     <td><a href="/customers/<%=customer._id%>">View More</a></td>
+     </tr>
+     <%  }) %>
+    </tbody>
+</table>
+
+
+<%- include("partials/footer"); -%>

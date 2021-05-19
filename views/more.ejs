@@ -1,0 +1,36 @@
+<%- include("partials/more-header"); -%>
+
+
+<div class="more-container">
+<img src="/img/User_Customers.png" alt="" style="width:100px;margin-left:150px;">
+  <div id="containerIntro">
+    <h2><strong>Name:-</strong</h2>
+      <p><%= name %></p>
+</div>
+<div id="containerIntro">
+  <h2><strong>Email:</strong>-</h2>
+      <p><%= email %></p>
+</div>
+<div id="containerIntro">
+  <h2><strong>Balance:</strong>-</h2>
+      <p><%= balance %></p>
+</div>
+<div id="containerIntro">
+  <h2><strong>Gender:-</strong></h2>
+      <p><%= gender %></p>
+</div>
+<div id="containerIntro">
+  <h2><strong>Account No.:-</strong></h2>
+      <p><%= acno %></p>
+</div>
+
+
+</div>
+<div style="margin-left:500px;margin-bottom:100px;">
+  <a href="/transaction"><button type="button" class="btn btn-primary btn-lg">Send Money</button></a>
+
+</div>
+
+
+
+<%- include("partials/footer"); -%>

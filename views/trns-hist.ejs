@@ -1,0 +1,31 @@
+<%- include("partials/histheader"); -%>
+<h1><strong><u>Transaction History</u></strong></h1>
+<%if(transactions.length===0){%>
+  <div style="margin-bottom:300px;">
+    <h1 style="color:#080808">No transaction happen</h1>
+  </div>
+<%}else{%>
+<table class="styled-table" style="margin-bottom:450px;">
+    <thead>
+        <tr>
+            <th>Sender Name</th>
+            <th>Receiver Name</th>
+            <th>Amount</th>
+            <th>Transaction Time</th>
+        </tr>
+    </thead>
+    <tbody>
+
+          <% transactions.forEach(function(transaction){ %>
+            <tr class="active-row">
+     <td><%= transaction.sendname %></td>
+     <td><%= transaction.recvname %></td>
+     <td><%= transaction.amt %></td>
+     <td><%= transaction.dttime %></td>
+     </tr>
+     <%  }) %>
+    </tbody>
+</table>
+<%}%>
+
+<%- include("partials/footer"); -%>

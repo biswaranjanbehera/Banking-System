@@ -1,0 +1,37 @@
+<%- include("partials/transaction-header"); -%>
+
+<div class="" style="background-color: #f3f3f3;margin-left:390px;margin-right:530px;margin-bottom:250px;">
+<img src="/img/send-money-36-1131476.png" style="width:100px;margin-left:130px;" alt="">
+
+<form class="" action="/transaction" method="post">
+  <label style="font-size:20px;">Senders Name: </label>
+
+  <select name="sendname">
+    <option>Select</option>
+    <%  customers.forEach(function(customer){ %>
+    <option><%= customer.name%></option>
+    <%= customer.name%>
+    <%  }) %>
+  </select>
+  <br><br>
+
+  <label style="font-size:20px;">Receivers Name: </label>
+  <select name="recvname">
+    <option required>Select</option>
+    <%  customers.forEach(function(customer){ %>
+    <option><%= customer.name%></option>
+    <%= customer.name%>
+    <%  }) %>
+  </select>
+  <br><br>
+
+  <label style="font-size:20px;">Amount:</label>
+      <input type="text" name="amt" autocomplete="off">
+      <br><br>
+  <button  style="margin-left:120px;" class="btn btn-primary" type="submit" name="button" >Send Money</button>
+</form>
+
+</div>
+
+
+<%- include("partials/footer"); -%>
